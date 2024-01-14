@@ -1,7 +1,7 @@
-- name: Adobe Photoshop
+- name: SQL
   percentage: 95
   color: info
 
-- name: Adobe Illustrator
-  percentage: 90
+- name: Geosparql
+  percentage: 20
   color: success
