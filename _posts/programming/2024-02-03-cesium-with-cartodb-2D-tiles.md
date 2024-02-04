@@ -5,7 +5,13 @@ image: http://www.geosolutionsgroup.com/wp-content/uploads/2023/06/cesium-certif
 description: Seeing if I can Embed the Viewer in a Static Page embedded on GitHub
 ---
 
-First test for the cesium viewer on a static page! 
+## Purpose
+Test CesiumJS viewer to see if I can integrate it into a Jekyll page with free 2D map providers via CartoDB, Open Street Maps, and "National Map" (Australia gov't). 
+
+## How to use it
+In the top of the viewer click on the data provider button to switch between basemaps.
+
+![alt text](/resources/2024-02-03-cesium-with-cartodb-2D-tiles-dropdown.png)
 
 
 <!-- Include the CesiumJS JavaScript and CSS files -->
