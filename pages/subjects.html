@@ -1,0 +1,33 @@
+---
+layout: page
+title: Subjects
+weight: 4
+---
+<h1>Subjects I Write About...</h1>
+<div>
+    Apologies about the order: I still don't have alphabetical order sorted out yet. Working on it...
+</div>
+
+<br/>
+<!-- get the include file to give us all the tags in `projects and blog-posts -->
+{% include group-by-array.html collection=site.documents field='tags' %}
+
+<!-- Sort the tags alphabetically -->
+{% assign group_names_sorted = group_names | split:',' | sort_natural %}
+
+<div>
+    {% for tag in group_names %}
+    {% assign posts = group_items[forloop.index0] %}
+
+    <div>
+        <b>{{ tag  | replace: '-', ' ' | replace: '"', ' '| replace: '[', ' ' | replace: ']', ' ' | upcase}}</b>
+        <ul>
+            {% for post in posts %}
+            <li>
+                <a href='{{ site.baseurl }}{{ post.url }}'>{{ post.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+</div> 

@@ -1,6 +1,6 @@
 ---
 title: Urban GIS, Time Machines, Infrastructural Design Rationale 
-tags: [Urban, GIS, Experiential Learning, Course, GEOG-588]
+tags: [Urban, GIS, Experiential-Learning, Teaching, GEOG-588-Urban-GIS]
 style: fill
 color: danger
 description: A brainstorm on how to help support students from a pedestrian-only mentality to one that also encompasses urban planning and infrastructure engineering.

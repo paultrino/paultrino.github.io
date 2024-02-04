@@ -1,6 +1,6 @@
 ---
 title: Vocab-Supported Insights from Martinson & Golly Ltd
-tags: [Urban, GIS, Experiential Learning, Course, GEOG-588]
+tags: [Urban, GIS, Experiential-Learning, Teaching, GEOG-588-Urban-GIS]
 style: fill
 color: primary
 description: Learning how to support an experiential learning class as a teaching assistant and had an excellent insight!

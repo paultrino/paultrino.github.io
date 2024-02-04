@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-weight: 3
+weight: 1
 ---
 
 # **About Me**
@@ -24,3 +24,17 @@ It is a subject close to me: When I was younger, I almost lost my legs, and I pr
 <div class="row">
 {% include about/timeline.html %}
 </div> -->
+
+## Subjects I write about...
+
+My projects and blog posts have the following tags (aka. subjects)...
+
+<div class="tags">
+{% for tag in site.tags %}
+  {% assign t = tag | first %}
+  {% assign posts = tag | last %}
+  <a    class="badge badge-secondary" 
+        href="{{site.baseurl}}/blog/tags#{{t}}" 
+        target="_blank">{{t | upcase | replace:" ","-" }} ({{ posts | size }})</a>
+{% endfor %}
+</div>

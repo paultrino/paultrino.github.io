@@ -1,6 +1,6 @@
 ---
 name: Advanced Spatial Analysis & Modeling (Winter 2024)
-tools: [machine learning, big data, cloud native]
+tags: [Geospatial-Statistics, ]
 image: https://platform.efabless.com/static/images/geostats-updated-on-28_feb19.jpg
 description: Resources for my GEOG-639 class...
 ---
