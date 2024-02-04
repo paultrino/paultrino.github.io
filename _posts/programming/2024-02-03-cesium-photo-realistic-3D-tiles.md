@@ -56,7 +56,7 @@ See this link for details: https://developers.google.com/maps/documentation/tile
     
         -1638505.031170999,
         -3670575.300085036, 
-         5935447.782384179
+         5035447.782384179
 
         //-1639781.181433961, 
         //-3668608.061201111, 
