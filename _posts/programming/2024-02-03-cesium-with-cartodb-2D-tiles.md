@@ -176,7 +176,7 @@ First test for the cesium viewer on a static page!
 
         ),
         orientation: new Cesium.HeadingPitchRoll(
-          -3.455010,
+          -2.455010,
           -0.2863894863138836,
           1.3561760425773173e-7
         ),

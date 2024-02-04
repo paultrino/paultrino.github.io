@@ -66,13 +66,13 @@ See this link for details: https://developers.google.com/maps/documentation/tile
          //-3766031.6151890275, 
          // 4899541.872834316
 
-        -1639351.1093918397, 
+          -1639351.1093918397, 
           -3666172.594959622, 
-           4938700.0
+           4990700.0
 
         ),
         orientation: new Cesium.HeadingPitchRoll(
-          -3.455010,
+          -3.955010,
           -0.2863894863138836,
           1.3561760425773173e-7
         ),
