@@ -19,6 +19,10 @@ See this link for details: https://developers.google.com/maps/documentation/tile
 <div id="cesiumContainer"></div>
 <script>
 
+    // Set the Cesium Ion token to `null` to avoid warnings
+    Cesium.Ion.defaultAccessToken = null;
+
+
     window.onunhandledrejection = event => {
       console.warn(`UNHANDLED PROMISE REJECTION: ${event.reason}`);
     };
