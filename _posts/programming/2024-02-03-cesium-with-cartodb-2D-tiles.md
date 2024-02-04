@@ -170,9 +170,9 @@ First test for the cesium viewer on a static page!
          //-3640187.5318698585, 
          // 4962000.809236132
           
-          -1642000.8304259968, 
-          -3666000.9879576718,
-           4940000.0
+          -1643000.8304259968, 
+          -3677000.9879576718,
+           4939000.0
 
         ),
         orientation: new Cesium.HeadingPitchRoll(

@@ -5,10 +5,13 @@ image: http://www.geosolutionsgroup.com/wp-content/uploads/2023/06/cesium-certif
 description: Seeing if I can Embed the Viewer in a Static Page embedded on GitHub
 ---
 
-Nothing fancy here, just re-creating the cesium sandbox example on my github page to see if I could do it. Very cool that it is working.
+Purpose: Integrate CesiumJS Viewer using Google 3D tiles into a serverless environment via Jeykyll on github, and point the viewer via 3D coordinates / heading to Calgary, Canada.
 
-See this link for details: https://developers.google.com/maps/documentation/tile/3d-tiles
+It's an interesting experiment because generally, when you push things into a public repository you cannot hide important aspects like `secrets` such as the API key for an endpoint. Instead I had to dig into the documentation a bit and figure out how to do it. 
 
+See this link for details: 
+- Consuming Google 3D photorealistic tiles: https://developers.google.com/maps/documentation/tile/3d-tiles
+- Securing secrets on github: https://www.youtube.com/watch?v=IuT0Ua7V4xA
 
 <!-- Include the CesiumJS JavaScript and CSS files 
       @ https://developers.google.com/maps/documentation/tile/3d-tiles
@@ -21,7 +24,6 @@ See this link for details: https://developers.google.com/maps/documentation/tile
 
     // Set the Cesium Ion token to `null` to avoid warnings
     Cesium.Ion.defaultAccessToken = null;
-
 
     window.onunhandledrejection = event => {
       console.warn(`UNHANDLED PROMISE REJECTION: ${event.reason}`);
@@ -38,7 +40,7 @@ See this link for details: https://developers.google.com/maps/documentation/tile
     });
 
     const tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
-      url: "https://tile.googleapis.com/v1/3dtiles/root.json?key=AIzaSyA26OxLFQuImt9-8Vpm7gK400FmhqiNubA",
+      url: "https://tile.googleapis.com/v1/3dtiles/root.json?key=",
       showCreditsOnScreen: true,
     }));
 
