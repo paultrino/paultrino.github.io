@@ -4,14 +4,16 @@ tags: [gis, cesiumjs, o3de, 3D, cloud-native]
 image: http://www.geosolutionsgroup.com/wp-content/uploads/2023/06/cesium-certified-dev-logo-sm.png?x31768
 description: Seeing if I can Embed the Viewer in a Static Page embedded on GitHub
 ---
+*TLDR;* You need a serverless environment that can do more than host static-pages like github otherwise you can't secure your API keys. This webpage is currently disabled. 
 
-Purpose: Integrate CesiumJS Viewer using Google 3D tiles into a serverless environment via Jeykyll on github, and point the viewer via 3D coordinates / heading to Calgary, Canada.
+Purpose: Create an experiment to integrate CesiumJS Viewer using Google 3D tiles into a serverless environment via Jeykyll on github, and point the viewer via 3D coordinates / heading to Calgary, Canada.
 
-It's an interesting experiment because generally, when you push things into a public repository you cannot hide important aspects like `secrets` such as the API key for an endpoint. Instead I had to dig into the documentation a bit and figure out how to do it. 
+It was an interesting experiment because generally, when you push things into a public repository you cannot hide important aspects like `secrets` such as the API key for an endpoint. Instead I had to dig into the documentation a bit and figure out how to do it only to discover you need a serverless environment with more security than Github pages. 
 
-See this link for details: 
+See these links for details: 
 - Consuming Google 3D photorealistic tiles: https://developers.google.com/maps/documentation/tile/3d-tiles
 - Securing secrets on github: https://www.youtube.com/watch?v=IuT0Ua7V4xA
+- Offline server for homemade 3D tiles: https://github.com/CesiumGS/cesium/tree/main/Documentation/OfflineGuide
 
 <!-- Include the CesiumJS JavaScript and CSS files 
       @ https://developers.google.com/maps/documentation/tile/3d-tiles
@@ -24,6 +26,9 @@ See this link for details:
 
     // Set the Cesium Ion token to `null` to avoid warnings
     Cesium.Ion.defaultAccessToken = null;
+
+    // Go to your google API console to get this value
+    GOOGLE_API_KEY = "your-google-maps-api-key"
 
     window.onunhandledrejection = event => {
       console.warn(`UNHANDLED PROMISE REJECTION: ${event.reason}`);
@@ -39,8 +44,9 @@ See this link for details:
       requestRenderMode: true,
     });
 
-    const tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
-      url: "https://tile.googleapis.com/v1/3dtiles/root.json?key=",
+    const GOOGLE_URL = "https://tile.googleapis.com/v1/3dtiles/root.json?key=" + GOOGLE_API_KEY, 
+      tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
+      url: GOOGLE_URL,
       showCreditsOnScreen: true,
     }));
 
