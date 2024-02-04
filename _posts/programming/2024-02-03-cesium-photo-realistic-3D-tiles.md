@@ -57,11 +57,11 @@ See this link for details: https://developers.google.com/maps/documentation/tile
         //-3668608.061201111, 
         //  4936479.566174412
         ),
-      orientation: new Cesium.HeadingPitchRoll(
-        4.6550106925119925,
-        -0.2863894863138836,
-        1.3561760425773173e-7
-      ),
+        //orientation: new Cesium.HeadingPitchRoll(
+        //  4.6550106925119925,
+        //  -0.2863894863138836,
+        //  1.3561760425773173e-7
+        //),
     }); 
 
     viewer.canvas.addEventListener('click',
