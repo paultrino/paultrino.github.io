@@ -43,15 +43,17 @@ See this link for details: https://developers.google.com/maps/documentation/tile
 
     // Point the camera at the Googleplex
     viewer.scene.camera.setView({
-      //destination: new Cesium.Cartesian3(
-      //  -2693797.551060477,
-      //  -4297135.517094725,
-      //  3854700.7470414364
-      //),
+      destination: new Cesium.Cartesian3(
+        
+        // google's building from example
+        //  -2693797.551060477,
+        //  -4297135.517094725,
+        //  3854700.7470414364
+    
 
-          -1639781.181433961, 
-          -3668608.061201111, 
-           4936479.566174412
+        -1639781.181433961, 
+        -3668608.061201111, 
+          4936479.566174412
         ),
       orientation: new Cesium.HeadingPitchRoll(
         4.6550106925119925,
