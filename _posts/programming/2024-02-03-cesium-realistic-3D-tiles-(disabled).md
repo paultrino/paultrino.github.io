@@ -1,16 +1,22 @@
 ---
 name: CesiumJS Viewer / Jekyll Integration
 tags: [gis, cesiumjs, o3de, 3D, cloud-native]
-image: http://www.geosolutionsgroup.com/wp-content/uploads/2023/06/cesium-certified-dev-logo-sm.png?x31768
+style: fill
+color: danger
+image: /resources/2024-02-03-cesium-3D-tiles.png
 description: Code works, but temporarily disabled (feel free to use this in your own projects, just provide an API key) for security reasons. Seeing if I can Embed the Viewer in a Static Page embedded on GitHub
 ---
 
 ## This is disabled (but the code can work)!
 Though the code works, I've disabled it by not including the API key: you need a serverless environment that can do more than host static-pages like github otherwise you can't secure your secret keys.  
 
-## Purpose: 
+## Purpose: 3D Viewer over Calgary
 
-Create an experiment to integrate CesiumJS Viewer using Google 3D tiles into a serverless environment via Jeykyll on github, and point the viewer via 3D coordinates / heading to Calgary, Canada.
+This is what it is supposed to look like when not disabled (viewer is located at bottom of page)...
+
+![Cesium 3D tiles with Google tiles over Calgary, Alberta, Canada](/resources/2024-02-03-cesium-3D-tiles.png)
+
+Create an experiment to integrate CesiumJS Viewer using Google 3D tiles into a serverless environment via Jeykyll on github, and point the viewer via 3D coordinates + 3D heading/pitch/roll to view **Calgary**, Canada.
 
 It was an interesting experiment because generally, when you push things into a public repository you cannot hide important aspects like `secrets` such as the API key for an endpoint. Instead I had to dig into the documentation a bit and figure out how to do it only to discover you need a serverless environment with more security than Github pages. 
 
@@ -23,7 +29,8 @@ See these links for details:
 
 ## Next steps
 
-Explore the use of Streamlit as Dr. Wu's recommendation: https://discuss.streamlit.io/t/display-a-cesiumjs-3d-map-in-a-streamlit-web-app/19993
+Explore the use of Streamlit as Dr. Wu's recommendation:
+- https://discuss.streamlit.io/t/display-a-cesiumjs-3d-map-in-a-streamlit-web-app/19993
 
 <!-- Include the CesiumJS JavaScript and CSS files 
       @ https://developers.google.com/maps/documentation/tile/3d-tiles
