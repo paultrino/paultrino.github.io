@@ -2,7 +2,7 @@
 name: CesiumJS Viewer / Jekyll Integration
 tags: [gis, cesiumjs, o3de, 3D, cloud-native]
 image: http://www.geosolutionsgroup.com/wp-content/uploads/2023/06/cesium-certified-dev-logo-sm.png?x31768
-description: Seeing if I can Embed the Viewer in a Static Page embedded on GitHub
+description: Code works, but temporarily disabled (feel free to use this in your own projects, just provide an API key) for security reasons. Seeing if I can Embed the Viewer in a Static Page embedded on GitHub
 ---
 
 ## This is disabled (but the code can work)!
