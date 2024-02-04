@@ -21,6 +21,10 @@ See these links for details:
 - Securing secrets on github: https://www.youtube.com/watch?v=IuT0Ua7V4xA
 - Offline server for homemade 3D tiles: https://github.com/CesiumGS/cesium/tree/main/Documentation/OfflineGuide
 
+## Next steps
+
+Explore the use of Streamlit as Dr. Wu's recommendation: https://discuss.streamlit.io/t/display-a-cesiumjs-3d-map-in-a-streamlit-web-app/19993
+
 <!-- Include the CesiumJS JavaScript and CSS files 
       @ https://developers.google.com/maps/documentation/tile/3d-tiles
 -->
