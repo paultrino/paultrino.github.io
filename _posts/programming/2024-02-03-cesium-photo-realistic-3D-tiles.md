@@ -5,7 +5,9 @@ image: http://www.geosolutionsgroup.com/wp-content/uploads/2023/06/cesium-certif
 description: Seeing if I can Embed the Viewer in a Static Page embedded on GitHub
 ---
 
-First test for the cesium viewer on a static page! 
+Nothing fancy here, just re-creating the cesium sandbox example on my github page to see if I could do it. Very cool that it is working.
+
+See this link for details: https://developers.google.com/maps/documentation/tile/3d-tiles
 
 
 <!-- Include the CesiumJS JavaScript and CSS files 
@@ -16,6 +18,15 @@ First test for the cesium viewer on a static page!
 
 <div id="cesiumContainer"></div>
 <script>
+
+    window.onunhandledrejection = event => {
+      console.warn(`UNHANDLED PROMISE REJECTION: ${event.reason}`);
+    };
+
+    window.onerror = function(message, source, lineNumber, colno, error) {
+      console.warn(`UNHANDLED ERROR: ${error.stack}`);
+    };
+
     const viewer = new Cesium.Viewer('cesiumContainer', {
       imageryProvider: false,
       baseLayerPicker: false,
@@ -43,6 +54,28 @@ First test for the cesium viewer on a static page!
         1.3561760425773173e-7
       ),
     }); 
+
+    viewer.canvas.addEventListener('click',
+      function(e){
+        var mousePosition = new Cesium.Cartesian2(e.clientX, e.clientY);
+        var ellipsoid = viewer.scene.globe.ellipsoid;
+        var cartesian = viewer.camera.pickEllipsoid(mousePosition, ellipsoid);
+
+        if (cartesian) {
+          var cartographic = ellipsoid.cartesianToCartographic(cartesian);
+          
+          var longitudeString = Cesium.Math.toDegrees(cartographic.longitude).toFixed(2);
+          var latitudeString = Cesium.Math.toDegrees(cartographic.latitude).toFixed(2);
+          var heightString = Cesium.Math.toDegrees(cartographic.height).toFixed(2);
+
+          console.log('longitude: ' + longitudeString + ', latitude: ' + latitudeString + ', height:' + heightString);
+
+          console.log('cartesian', cartesian);
+        } else {
+          console.log('Globe was not picked');
+        }
+
+      }, false);
 
 
 </script>
