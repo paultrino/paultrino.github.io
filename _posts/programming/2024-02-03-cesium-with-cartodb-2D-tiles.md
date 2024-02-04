@@ -157,5 +157,52 @@ First test for the cesium viewer on a static page!
   // Remove the Terrain section of the baseLayerPicker
   viewer.baseLayerPicker.viewModel.terrainProviderViewModels.removeAll()
 
+   // Point the camera at the Googleplex
+    viewer.scene.camera.setView({
+      destination: new Cesium.Cartesian3(
+        
+        // google's building from example
+        //  -2693797.551060477,
+        //  -4297135.517094725,
+        //  3854700.7470414364
+
+         //-1637851.0756622232, 
+         //-3640187.5318698585, 
+         // 4962000.809236132
+
+          -1639351.1093918397, 
+          -3666172.594959622, 
+           4938700.0
+
+        ),
+        orientation: new Cesium.HeadingPitchRoll(
+          -3.455010,
+          -0.2863894863138836,
+          1.3561760425773173e-7
+        ),
+    }); 
+
+    viewer.canvas.addEventListener('click',
+      function(e){
+        var mousePosition = new Cesium.Cartesian2(e.clientX, e.clientY);
+        var ellipsoid = viewer.scene.globe.ellipsoid;
+        var cartesian = viewer.camera.pickEllipsoid(mousePosition, ellipsoid);
+
+        if (cartesian) {
+          var cartographic = ellipsoid.cartesianToCartographic(cartesian);
+          
+          var longitudeString = Cesium.Math.toDegrees(cartographic.longitude).toFixed(2);
+          var latitudeString = Cesium.Math.toDegrees(cartographic.latitude).toFixed(2);
+          var heightString = Cesium.Math.toDegrees(cartographic.height).toFixed(2);
+
+          console.log('longitude: ' + longitudeString + ', latitude: ' + latitudeString + ', height:' + heightString);
+
+          console.log('cartesian', cartesian);
+        } else {
+          console.log('Globe was not picked');
+        }
+
+      }, false);
+
 </script>
 </div>
