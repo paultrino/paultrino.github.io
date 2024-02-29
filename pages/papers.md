@@ -9,7 +9,7 @@ weight: 2
 
 ##  Against Bias Related Harm...
 
-I co-wrote and presented [this paper](https://escholarship.org/uc/item/2pc4m4cg) with my supervisor, [Dr. Victoria Fast](https://geog.ucalgary.ca/profiles/victoria-fast), for the 2023, [Spatial Data Science Symposium](http://sdss2023.spatial-data-science.net/).
+I co-wrote and presented [this paper](https://escholarship.org/uc/item/2pc4m4cg) (DOI below) with my supervisor, Dr. Victoria Fast, for the 2023, Spatial Data Science Symposium: http://sdss2023.spatial-data-science.net/.
 
 - **TITLE**: Using a narrative-based approach as a safeguard against bias related harm in algorithmic tools and services
 
