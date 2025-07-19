@@ -3,4 +3,5 @@
 For documentation, see the website template that I have [forked from here...](https://youssefraafatnasry.github.io/portfolYOU/docs/)
 
 # Test locally
-`bundle exec jekyll serve`
+- `bundle install`
+- `bundle exec jekyll serve`

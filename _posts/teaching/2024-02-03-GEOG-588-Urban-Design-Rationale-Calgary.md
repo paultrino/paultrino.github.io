@@ -5,7 +5,7 @@ style: fill
 color: danger
 description: A brainstorm on how to help support students from a pedestrian-only mentality to one that also encompasses urban planning and infrastructure engineering.
 ---
-As mentioned on my projects page, I am TA'ing for GEOG-588 Urban GIS, which Dr. Fast as rewritten in a experiential-learning style. As part of this we have experts from industry come and give design challenges to our students.
+As mentioned on my projects page, I am TA'ing for GEOG-588 Urban GIS, rewritten in a experiential-learning style. As part of this we have experts from industry come and give design challenges to our students.
 
 Recently we had a visit from Ryan I had a solid insight in how to convey 
 

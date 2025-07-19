@@ -8,7 +8,7 @@ description: Resources for my GEOG-639 class...
 
 # GEOG-588 > Urban GIS
 
-I am TA'ing for [GEOG-588 Urban GIS](https://geog.ucalgary.ca/manageprofile/courses/w24/GEOG588) being taught by my PhD advisor [Dr. Victoria Fast](https://profiles.ucalgary.ca/victoria-fast), and she has *completely* redesigned the course to focus on experiential learning which presents guest-experts from industry to come and pose design-challenge questions to our students. 
+I am TA'ing for [GEOG-588 Urban GIS](https://geog.ucalgary.ca/manageprofile/courses/w24/GEOG588), and she has *completely* redesigned the course to focus on experiential learning which presents guest-experts from industry to come and pose design-challenge questions to our students. 
 
 #### Why it is exciting
 
@@ -16,7 +16,7 @@ It is proving to be an exciting course because of the ground breaking, experient
 
 #### My Role
 
-As TA, my role is 1) support Dr. Fast's new approach, and 2) help catalyze student innovation by conducting labs where students will develop their self-directed projects help students more deeply understand the course materials (and trouble shoot any technical issues they might have with GIS, Programming, or acquiring useful data.)
+As TA, my role is 1) support GEOG-588's new approach, and 2) help catalyze student innovation by conducting labs where students will develop their self-directed projects help students more deeply understand the course materials (and trouble shoot any technical issues they might have with GIS, Programming, or acquiring useful data.)
 
 I'll be posting occasional insights in small blog posts that you find in the blog section of my site.
 
